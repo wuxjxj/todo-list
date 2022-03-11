@@ -1,0 +1,10 @@
+.complete {
+  text-decoration: line-through;
+}
+#title {
+  background-color: lightblue;
+}
+
+ul {
+  list-style: none;
+}
