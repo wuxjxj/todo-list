@@ -10,7 +10,7 @@ newAddBtn.addEventListener("click", ()=> {
    const newLabel=document.createElement("label");
    newLabel.appendChild(newCheckBox);
    newLabel.innerHTML+=newTodoInputBox.value;
-   newTodoInputBox.value="";
+   
    
 
   
@@ -24,10 +24,22 @@ newAddBtn.addEventListener("click", ()=> {
 
   //  newTodo.appendChild(newTitle);
    
-   newTodo.appendChild(newLabel)
+   const todoLi=document.querySelectorAll('li');
+   
+  for(let i=0; i<todoLi.length;i++){
+    const left = newTodoInputBox.value+"delete";
+    const right = todoLi[i].innerText;
+    const isSame = left === right;
+    console.log(left, right, isSame)
+    if(isSame) {alert("Duplicate!");}
+    
+  
+  }
+  newTodo.appendChild(newLabel)
    newTodo.appendChild(deleteBtn);
    newList.appendChild(newTodo);
-   console.log(newTodoInputBox.value)
+   
+  newTodoInputBox.value="";
   });
  
 
