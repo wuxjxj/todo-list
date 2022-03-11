@@ -1,3 +1,1 @@
 # todo-list
-
-## quick install
